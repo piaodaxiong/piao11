@@ -35,9 +35,9 @@
         </div>
         <div class="remenpinpai2">保健品排行榜</div>
 
-        <div class="yanghuchanpin">
-            <div class="yanhuanshuailao" v-for="item in meirongyangyan">
-                <div class="yanhuanshuailaochanpin" @mouseenter="mymouseender($event)" @mouseleave='mymouseleave($event)'
+        <div class="yanghuchanpin11">
+            <div class="yanhuanshuailao22" v-for="item in meirongyangyan">
+                <div class="yanhuanshuailaochanpin11" @mouseenter="mymouseender($event)" @mouseleave='mymouseleave($event)'
                     v-for="item2 in item.no1">
                     <div class="yanghuchanpin_shang">
                         <a href=""><img :src="item2.tupian" alt=""></a>
@@ -62,98 +62,222 @@
                 </div>
             </div>
         </div>
+        <Celan />
     </div>
 </template>
 
 <script>
+    import Celan from "@/components/celan/Celan";
+
     export default {
         data() {
             return {
-                remenpinpai: [{
-                    pinpai: 'Puritan‘s Pride',
-                    jianjie: '普丽普莱 全家人的健康管理师',
-                    shangpinpinpai: [
-                        'https://www.ziyimall.com/images/c1.jpg',
-                        'https://www.ziyimall.com/images/1logo.png'
-                    ]
-                }, {
-                    pinpai: 'Healthy Care',
-                    jianjie: '澳洲少数获得TGA认证的保健品牌',
-                    shangpinpinpai: [
-                        'https://www.ziyimall.com/images/c2.jpg',
-                        'https://www.ziyimall.com/images/2logo.png'
-                    ]
-                }, {
-                    pinpai: 'Doppelherz',
-                    jianjie: '德国双心 拥有百年历史品牌',
-                    shangpinpinpai: [
-                        'https://www.ziyimall.com/images/c3.jpg',
-                        'https://www.ziyimall.com/images/3logo.png'
-                    ]
-                }, {
-                    pinpai: 'Thompon’s ',
-                    jianjie: '汤普森 呵护您的健康生活',
-                    shangpinpinpai: [
-                        'https://www.ziyimall.com/images/c4.jpg',
-                        'https://www.ziyimall.com/images/4logo.png'
-                    ]
-                }],
-                meirongyangyan: [
+                remenpinpai: [
                     {
-                        no1: [
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg' },
-
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg' },
-
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg' },
-
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg' },
-                            { tupian: 'https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg' }
+                        pinpai: "Puritan‘s Pride",
+                        jianjie: "普丽普莱 全家人的健康管理师",
+                        shangpinpinpai: [
+                            "https://www.ziyimall.com/images/c1.jpg",
+                            "https://www.ziyimall.com/images/1logo.png"
+                        ]
+                    },
+                    {
+                        pinpai: "Healthy Care",
+                        jianjie: "澳洲少数获得TGA认证的保健品牌",
+                        shangpinpinpai: [
+                            "https://www.ziyimall.com/images/c2.jpg",
+                            "https://www.ziyimall.com/images/2logo.png"
+                        ]
+                    },
+                    {
+                        pinpai: "Doppelherz",
+                        jianjie: "德国双心 拥有百年历史品牌",
+                        shangpinpinpai: [
+                            "https://www.ziyimall.com/images/c3.jpg",
+                            "https://www.ziyimall.com/images/3logo.png"
+                        ]
+                    },
+                    {
+                        pinpai: "Thompon’s ",
+                        jianjie: "汤普森 呵护您的健康生活",
+                        shangpinpinpai: [
+                            "https://www.ziyimall.com/images/c4.jpg",
+                            "https://www.ziyimall.com/images/4logo.png"
                         ]
                     }
                 ],
-            }
+                meirongyangyan: [
+                    {
+                        no1: [
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201807/31/20180731155544zDngd1lW_Thumb.jpg"
+                            },
+
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201605/24/201605241421019sNHuSam_Thumb.jpg"
+                            },
+
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/30/20180630144142JKEECRiD_Thumb.jpg"
+                            },
+
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg"
+                            },
+                            {
+                                tupian:
+                                    "https://www.ziyimall.com/file_img/products/63/201806/25/20180625103012YvLaTYFm_Thumb.jpg"
+                            }
+                        ]
+                    }
+                ]
+            };
         },
         methods: {
             mymouseender(e) {
-                $(e.target).find("img").stop().animate({ width: "110%", height: "110%", marginTop: "-5%", marginLeft: "-5%" })
+                $(e.target)
+                    .find("img")
+                    .stop()
+                    .animate({
+                        width: "110%",
+                        height: "110%",
+                        marginTop: "-5%",
+                        marginLeft: "-5%"
+                    });
             },
             mymouseleave(e) {
-                $(e.target).find("img").stop().animate({ width: "100%", height: "100%", marginTop: 0, marginLeft: 0 })
-            },
+                $(e.target)
+                    .find("img")
+                    .stop()
+                    .animate({
+                        width: "100%",
+                        height: "100%",
+                        marginTop: 0,
+                        marginLeft: 0
+                    });
+            }
+        },
+        components: {
+            Celan
         }
-    }
+    };
 </script>
 
 <style>
     #pinpaiguan {
+        /* height: 4700px; */
         background-color: #eeeeee;
     }
 
@@ -225,32 +349,30 @@
         justify-content: center;
     }
 
-
-    .yanghuchanpin {
+    .yanghuchanpin11 {
         width: 1216px;
-        /* height: 832px; */
         margin: 0 auto;
         /* position: relative; */
         padding-bottom: 60px;
     }
 
-    .yanhuanshuailao {
+    .yanhuanshuailao22 {
+        width: 1216px;
         display: flex;
         flex-wrap: wrap;
-        /* position: absolute; */
     }
 
-    .yanhuanshuailaochanpin {
+    .yanhuanshuailaochanpin11 {
         width: 288px;
         height: 400px;
         background-color: white;
         border: 1px solid white;
         box-sizing: border-box;
-        margin: 16px 16px 0 0;
+        margin: 16px 8px 0 8px;
         position: relative;
     }
 
-    .yanhuanshuailao>div:hover {
+    .yanhuanshuailao22>div:hover {
         border: 1px solid #f42f2f;
     }
 
@@ -323,7 +445,7 @@
     .yanghuchanpin_pinglun_left>div {
         width: 20px;
         height: 20px;
-        background-image: url('https://www.ziyimall.com/images/icon1.png');
+        background-image: url("https://www.ziyimall.com/images/icon1.png");
         background-position: -58px -320px;
         font-size: 12px;
     }

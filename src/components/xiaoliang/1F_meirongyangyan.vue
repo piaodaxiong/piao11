@@ -194,48 +194,17 @@
                 $(e.target).find("img").stop().animate({ width: "100%", height: "100%", marginTop: 0, marginLeft: 0 })
             },
             myqiehuan1() {
-                this.qiehuan11 = true;
-                this.qiehuan12 = false;
-                this.qiehuan13 = false;
-                this.qiehuan14 = false;
-                this.yanseqiehuan1 = 'border-bottom: 2px solid red;color:red;';
-                this.yanseqiehuan2 = '';
-                this.yanseqiehuan3 = '';
-                this.yanseqiehuan4 = '';
+                this.qiehuan11 = true;this.qiehuan12 = false;this.qiehuan13 = false;this.qiehuan14 = false;this.yanseqiehuan1 = 'border-bottom: 2px solid red;color:red;';this.yanseqiehuan2 = '';this.yanseqiehuan3 = '';this.yanseqiehuan4 = '';
             },
             myqiehuan2() {
-                this.qiehuan11 = false;
-                this.qiehuan12 = true;
-                this.qiehuan13 = false;
-                this.qiehuan14 = false;
-                this.yanseqiehuan1 = '';
-                this.yanseqiehuan2 = 'border-bottom: 2px solid red;color:red;';
-                this.yanseqiehuan3 = '';
-                this.yanseqiehuan4 = '';
+                this.qiehuan11 = false;this.qiehuan12 = true;this.qiehuan13 = false;this.qiehuan14 = false;this.yanseqiehuan1 = '';this.yanseqiehuan2 = 'border-bottom: 2px solid red;color:red;';this.yanseqiehuan3 = '';this.yanseqiehuan4 = '';
             },
             myqiehuan3() {
-                this.qiehuan11 = false;
-                this.qiehuan12 = false;
-                this.qiehuan13 = true;
-                this.qiehuan14 = false;
-                this.yanseqiehuan1 = '';
-                this.yanseqiehuan2 = '';
-                this.yanseqiehuan3 = 'border-bottom: 2px solid red;color:red;';
-                this.yanseqiehuan4 = '';
+                this.qiehuan11 = false;this.qiehuan12 = false;this.qiehuan13 = true;this.qiehuan14 = false;this.yanseqiehuan1 = '';this.yanseqiehuan2 = '';this.yanseqiehuan3 = 'border-bottom: 2px solid red;color:red;';this.yanseqiehuan4 = '';
             },
             myqiehuan4() {
-                this.qiehuan11 = false;
-                this.qiehuan12 = false;
-                this.qiehuan13 = false;
-                this.qiehuan14 = true;
-                this.yanseqiehuan1 = '';
-                this.yanseqiehuan2 = '';
-                this.yanseqiehuan3 = '';
-                this.yanseqiehuan4 = 'border-bottom: 2px solid red;color:red;';
+                this.qiehuan11 = false;this.qiehuan12 = false;this.qiehuan13 = false;this.qiehuan14 = true;this.yanseqiehuan1 = '';this.yanseqiehuan2 = '';this.yanseqiehuan3 = '';this.yanseqiehuan4 = 'border-bottom: 2px solid red;color:red;';
             }
-        },
-        components: {
-            // Qiangjiannanren,
         }
     }
 </script>

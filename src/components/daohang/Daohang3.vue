@@ -27,7 +27,7 @@
                     <a href="#/"><strong @click="myclick00()">首页</strong></a>
                     <a href="#/Xiaoliang"><strong @click="myclick11()">销量TOP</strong></a>
                     <a href="#/Pinpaiguan"><strong @click="myclick22()">品牌馆</strong></a>
-                    <a href="#/Jiankangbaike"><strong>健康百科</strong></a>
+                    <a href="#/Jiankangbaike"><strong @click="myclick33()">健康百科</strong></a>
                 </div>
             </div>
         </div>
@@ -99,6 +99,11 @@
             },
             myclick22(){
                 $('.left_daohang>ul').css({
+                    'display':'none'
+                })
+            },
+            myclick33(){
+                $('.juzhong3').css({
                     'display':'none'
                 })
             },

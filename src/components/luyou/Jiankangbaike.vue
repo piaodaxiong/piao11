@@ -320,7 +320,4 @@
         border: 1px solid #9e9b9b;
     }
 
-    .juzhong3 {
-        display: none;
-    }
 </style>

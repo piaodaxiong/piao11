@@ -3,13 +3,12 @@
         <!-- :style="daohang_yinchang" -->
         <div class="juzhong3">
             <div>
-                <div id="left_daohang">
-                    <button id="btn2">
+                <div class="left_daohang" @mouseleave="mouseleave11()">
+                    <button id="btn2" @mouseenter="mouseenter11()">
                         <div></div><span>全部商品分类</span>
                     </button>
                     <ul @mouseleave="mouseleave()">
-                        <!-- :style="yinchang" -->
-                        <li v-for="(item,index) in fenlei.list" @mouseenter="mouseenter(index,$event)" @mouseleave="mouseleave2($event)">
+                        <li v-for="(item,index) in fenlei.list" @mouseenter="mouseenter(index,$event)">
                             <div>
                                 <h2>{{item.title}}</h2>
                                 <span class="el-icon-caret-right"></span>
@@ -18,22 +17,19 @@
                                 <a href="" v-for='aa in item.content'>{{aa}}<span>/</span></a>
                             </section>
                         </li>
-                        <!-- <router-view /> -->
                         <Mulu1 :style="Mulu1"></Mulu1>
                         <Mulu2 :style="Mulu2"></Mulu2>
                         <Mulu3 :style="Mulu3"></Mulu3>
                         <Mulu4 :style="Mulu4"></Mulu4>
                     </ul>
-
                 </div>
                 <div id="right_daohang">
-                    <a href="#/"><strong>首页</strong></a>
-                    <a href="#/Xiaoliang"><strong>销量TOP</strong></a>
-                    <a href="#/Pinpaiguan"><strong>品牌馆</strong></a>
+                    <a href="#/"><strong @click="myclick00()">首页</strong></a>
+                    <a href="#/Xiaoliang"><strong @click="myclick11()">销量TOP</strong></a>
+                    <a href="#/Pinpaiguan"><strong @click="myclick22()">品牌馆</strong></a>
                     <a href="#/Jiankangbaike"><strong>健康百科</strong></a>
                 </div>
             </div>
-
         </div>
         <router-view></router-view>
     </div>
@@ -47,8 +43,6 @@
 
     export default {
         name: "daohang3",
-        // yinchang: "",
-        // daohang_yinchang:"",
         data() {
             return {
                 Mulu1: "display: none;",
@@ -83,6 +77,31 @@
             };
         },
         methods: {
+            mouseenter11(){
+                $('.left_daohang>ul').css({
+                    'display':'block'
+                })
+            },
+            mouseleave11(){
+                $('.left_daohang>ul').css({
+                    'display':'none'
+                })
+            },
+            myclick00(){
+                $('.left_daohang>ul').css({
+                    'display':'block'
+                })
+            },
+            myclick11(){
+                $('.left_daohang>ul').css({
+                    'display':'none'
+                })
+            },
+            myclick22(){
+                $('.left_daohang>ul').css({
+                    'display':'none'
+                })
+            },
             mouseenter(index, e) {
                 if (index == 0) {
                     this.Mulu1 = "";
@@ -116,23 +135,7 @@
                 this.Mulu2 = "display: none;";
                 this.Mulu3 = "display: none;";
                 this.Mulu4 = "display: none;";
-            },
-            mouseleave2(e) {
-                //     e.target.style.backgroundColor = '';
-                //     e.target.style.opacity = 1;
-            },
-            // myclick1(){
-            //     this.yinchang = '';
-            // },
-            // myclick2(){
-            //     this.yinchang = 'display:none;';
-            // },
-            // myclick3(){
-            //     this.yinchang = 'display:none;';
-            // },
-            // myclick4(){
-            //     this.daohang_yinchang = 'display:none;';
-            // }
+            }
         },
         components: {
             Mulu1,
@@ -144,7 +147,7 @@
 </script>
 
 <style>
-    #left_daohang section>a:nth-child(4)>span {
+    .left_daohang section>a:nth-child(4)>span {
         display: none;
     }
 
@@ -185,11 +188,11 @@
         background-position: -185px 5px;
     }
 
-    #left_daohang {
+    .left_daohang {
         width: 18%;
     }
 
-    #left_daohang>ul {
+    .left_daohang>ul {
         width: 18%;
         height: 450px;
         position: absolute;
@@ -198,7 +201,7 @@
         z-index: 100;
     }
 
-    #left_daohang>ul>li {
+    .left_daohang>ul>li {
         width: 100%;
         height: 20%;
         background-color: #6f00af;
@@ -208,13 +211,13 @@
         padding: 10px 10px;
     }
 
-    #left_daohang>ul>li h2 {
+    .left_daohang>ul>li h2 {
         color: white;
         font-size: 16px;
         line-height: 25px;
     }
 
-    #left_daohang>ul>li a {
+    .left_daohang>ul>li a {
         color: white;
         font-size: 14px;
         line-height: 20px;
@@ -222,22 +225,22 @@
         padding-right: 5px;
     }
 
-    #left_daohang>ul>li a:hover {
-        text-decoration: white underline;
+    .left_daohang>ul>li a:hover {
+        text-decoration: underline;
     }
 
-    #left_daohang>ul>li div {
+    .left_daohang>ul>li div {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    #left_daohang>ul>li span {
+    .left_daohang>ul>li span {
         color: white;
         font-size: 15px;
     }
 
-    #left_daohang>ul>li section {
+    .left_daohang>ul>li section {
         padding-right: 10px;
     }
 
